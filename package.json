@@ -1,0 +1,30 @@
+{
+    "name": "webpack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "webpack-dev-server --config webpack.development.config.js",
+        "build:dev": "webpack --config webpack.development.config.js",
+        "lint": "npx eslint ./src --fix",
+        "build:prod": "webpack --config webpack.production.config.js"
+    },
+    "author": "",
+    "pre-commit": [
+        "lint"
+    ],
+    "license": "ISC",
+    "dependencies": {
+        "html-webpack-plugin": "^5.6.0",
+        "json-server": "^1.0.0-alpha.23",
+        "pre-commit": "^1.2.2",
+        "webpack": "^5.90.2",
+        "webpack-cli": "^5.1.4",
+        "webpack-dev-server": "^5.0.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.56.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.29.1"
+    }
+}
